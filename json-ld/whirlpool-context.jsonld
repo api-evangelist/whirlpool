@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "whirlpool": "https://www.whirlpoolcorp.com/vocab#",
+    "matter": "https://csa-iot.org/developer-resource/matter/vocab#",
+
+    "ConnectedAppliance": "whirlpool:ConnectedAppliance",
+    "Washer": "whirlpool:Washer",
+    "Dryer": "whirlpool:Dryer",
+    "Oven": "whirlpool:Oven",
+    "Refrigerator": "whirlpool:Refrigerator",
+    "AirConditioner": "whirlpool:AirConditioner",
+    "Dishwasher": "whirlpool:Dishwasher",
+
+    "applianceId": "whirlpool:applianceId",
+    "modelNumber": "whirlpool:modelNumber",
+    "serialNumber": "whirlpool:serialNumber",
+    "machineState": "whirlpool:machineState",
+    "cycleType": "whirlpool:cycleType",
+    "timeRemaining": "whirlpool:timeRemaining",
+    "spinSpeed": "whirlpool:spinSpeed",
+    "waterTemperature": "whirlpool:waterTemperature",
+    "soilLevel": "whirlpool:soilLevel",
+    "washAndGoTankFill": "whirlpool:washAndGoTankFill",
+    "wrinkleShield": "whirlpool:wrinkleShield",
+    "iceMode": "whirlpool:iceMode",
+    "quickCool": "whirlpool:quickCool",
+    "sixthSense": "whirlpool:sixthSense",
+    "dashReplenishment": "whirlpool:dashReplenishment",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "brand": "schema:brand",
+    "model": "schema:model",
+    "serialNumber": "schema:serialNumber",
+    "manufacturer": "schema:manufacturer",
+    "url": "schema:url",
+    "category": "schema:category",
+
+    "Product": "schema:Product",
+    "HouseholdAppliance": "schema:HouseholdAppliance",
+    "IndividualProduct": "schema:IndividualProduct",
+
+    "WashingMachine": "schema:WashingMachine",
+    "Microwave": "schema:Microwave",
+
+    "targetTemperature": "schema:targetTemperature",
+    "temperature": "schema:temperature",
+    "energyConsumption": "schema:energyConsumption",
+    "identifier": "schema:identifier",
+    "dateCreated": "schema:dateCreated",
+
+    "IoTDevice": "whirlpool:IoTDevice",
+    "SmartHome": "whirlpool:SmartHome",
+    "MatterSupport": "matter:MatterSupport",
+    "VoiceControl": "whirlpool:VoiceControl",
+    "RemoteControl": "whirlpool:RemoteControl"
+  }
+}

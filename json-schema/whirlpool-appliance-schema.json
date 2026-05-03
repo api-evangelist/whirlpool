@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whirlpool/main/json-schema/whirlpool-appliance-schema.json",
+  "title": "Whirlpool Connected Appliance",
+  "description": "Schema representing a Whirlpool smart/connected appliance with state, capabilities, and connectivity information.",
+  "type": "object",
+  "properties": {
+    "applianceId": {
+      "type": "string",
+      "description": "Unique identifier for the appliance in the Whirlpool cloud."
+    },
+    "brand": {
+      "type": "string",
+      "enum": ["Whirlpool", "Maytag", "KitchenAid", "JennAir", "Amana", "Brastemp", "Consul", "InSinkErator"],
+      "description": "Brand of the appliance."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Washer", "Dryer", "Oven", "Refrigerator", "Dishwasher", "AirConditioner", "Microwave", "Range"],
+      "description": "Type/category of the appliance."
+    },
+    "modelNumber": {
+      "type": "string",
+      "description": "Manufacturer model number."
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Appliance serial number."
+    },
+    "nickname": {
+      "type": "string",
+      "description": "User-assigned friendly name for the appliance."
+    },
+    "region": {
+      "type": "string",
+      "enum": ["EU", "NA", "SA", "ASIA"],
+      "description": "Geographic region where the appliance is registered."
+    },
+    "connectivity": {
+      "type": "object",
+      "description": "Connectivity status of the appliance.",
+      "properties": {
+        "connected": {
+          "type": "boolean",
+          "description": "Whether the appliance is currently online."
+        },
+        "protocol": {
+          "type": "string",
+          "enum": ["WiFi", "Matter", "Bluetooth"],
+          "description": "Connectivity protocol used."
+        },
+        "lastSeen": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the appliance last communicated with the cloud."
+        }
+      }
+    },
+    "state": {
+      "type": "object",
+      "description": "Current operational state of the appliance.",
+      "properties": {
+        "machineState": {
+          "type": "string",
+          "enum": ["Standby", "Running", "Paused", "Delay", "Complete", "Error"],
+          "description": "Current machine state."
+        },
+        "timeRemaining": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Minutes remaining in current cycle or operation."
+        },
+        "doorOpen": {
+          "type": "boolean",
+          "description": "Whether the appliance door is open (washers, dryers, dishwashers)."
+        }
+      }
+    },
+    "washerState": {
+      "type": "object",
+      "description": "Washer-specific state (only present for Washer type).",
+      "properties": {
+        "cycleType": {
+          "type": "string",
+          "enum": ["Normal", "Delicate", "BulkyItems", "Colors", "Whites", "QuickWash", "HeavyDuty"],
+          "description": "Active wash cycle type."
+        },
+        "spinSpeed": {
+          "type": "string",
+          "enum": ["NoSpin", "Low", "Medium", "High"],
+          "description": "Spin speed setting."
+        },
+        "waterTemperature": {
+          "type": "string",
+          "enum": ["Cold", "Warm", "Hot", "TapCold"],
+          "description": "Water temperature setting."
+        },
+        "soilLevel": {
+          "type": "string",
+          "enum": ["Light", "Normal", "Heavy"],
+          "description": "Soil level setting."
+        },
+        "washAndGoTankFill": {
+          "type": "string",
+          "enum": ["Empty", "Low", "Medium", "Full"],
+          "description": "Detergent tank fill level for wash-and-go systems."
+        }
+      }
+    },
+    "dryerState": {
+      "type": "object",
+      "description": "Dryer-specific state (only present for Dryer type).",
+      "properties": {
+        "cycleType": {
+          "type": "string",
+          "enum": ["Normal", "Delicate", "BulkyItems", "QuickDry", "SteamRefresh"],
+          "description": "Active dryer cycle type."
+        },
+        "dryingTemperature": {
+          "type": "string",
+          "enum": ["Low", "Medium", "High"],
+          "description": "Drying temperature setting."
+        },
+        "dryLevel": {
+          "type": "string",
+          "enum": ["MoreDry", "NormalDry", "LessDry", "DampDry"],
+          "description": "Dryness level target."
+        },
+        "wrinkleShield": {
+          "type": "boolean",
+          "description": "Whether Wrinkle Shield option is active."
+        }
+      }
+    },
+    "ovenState": {
+      "type": "object",
+      "description": "Oven/range-specific state (only present for Oven/Range type).",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["Off", "Bake", "Broil", "Roast", "Convect", "WarmHold", "Proof", "Sabbath"],
+          "description": "Current oven cooking mode."
+        },
+        "targetTemperature": {
+          "type": "number",
+          "description": "Target temperature in Celsius."
+        },
+        "currentTemperature": {
+          "type": "number",
+          "description": "Current oven cavity temperature in Celsius."
+        },
+        "timerMinutes": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Cook timer remaining in minutes."
+        }
+      }
+    },
+    "refrigeratorState": {
+      "type": "object",
+      "description": "Refrigerator-specific state (only present for Refrigerator type).",
+      "properties": {
+        "fridgeTemperature": {
+          "type": "number",
+          "description": "Refrigerator compartment temperature in Celsius (range: -4°C to 5°C)."
+        },
+        "freezerTemperature": {
+          "type": "number",
+          "description": "Freezer compartment temperature in Celsius."
+        },
+        "iceMode": {
+          "type": "string",
+          "enum": ["Off", "On", "ExpressIce"],
+          "description": "Ice maker mode setting."
+        },
+        "quickCool": {
+          "type": "boolean",
+          "description": "Whether Quick Cool is active."
+        }
+      }
+    },
+    "airConditionerState": {
+      "type": "object",
+      "description": "Air conditioner-specific state (only present for AirConditioner type).",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["Off", "Heat", "Cool", "FanOnly", "Auto"],
+          "description": "HVAC operating mode."
+        },
+        "targetTemperature": {
+          "type": "number",
+          "description": "Target temperature in Celsius."
+        },
+        "fanSpeed": {
+          "type": "string",
+          "enum": ["Low", "Medium", "High", "Auto"],
+          "description": "Fan speed setting."
+        },
+        "swingMode": {
+          "type": "string",
+          "enum": ["Off", "Horizontal", "Vertical", "Both"],
+          "description": "Air direction swing mode."
+        }
+      }
+    },
+    "integrations": {
+      "type": "array",
+      "description": "Third-party integrations enabled for this appliance.",
+      "items": {
+        "type": "string",
+        "enum": ["AmazonAlexa", "GoogleAssistant", "AmazonDashReplenishment", "HomeAssistant", "Matter", "Nest"]
+      }
+    }
+  },
+  "required": ["applianceId", "brand", "type"]
+}

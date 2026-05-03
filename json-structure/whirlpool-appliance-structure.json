@@ -1,0 +1,90 @@
+{
+  "name": "Whirlpool Connected Appliance",
+  "description": "Structure of a Whirlpool smart appliance with state, capabilities, and connectivity.",
+  "fields": [
+    { "name": "applianceId", "type": "string", "required": true },
+    { "name": "brand", "type": "string", "enum": ["Whirlpool", "Maytag", "KitchenAid", "JennAir", "Amana", "Brastemp", "Consul", "InSinkErator"], "required": true },
+    { "name": "type", "type": "string", "enum": ["Washer", "Dryer", "Oven", "Refrigerator", "Dishwasher", "AirConditioner", "Microwave", "Range"], "required": true },
+    { "name": "modelNumber", "type": "string", "required": false },
+    { "name": "serialNumber", "type": "string", "required": false },
+    { "name": "nickname", "type": "string", "required": false },
+    { "name": "region", "type": "string", "required": false },
+    {
+      "name": "connectivity",
+      "type": "object",
+      "required": false,
+      "fields": [
+        { "name": "connected", "type": "boolean" },
+        { "name": "protocol", "type": "string" },
+        { "name": "lastSeen", "type": "string", "format": "date-time" }
+      ]
+    },
+    {
+      "name": "state",
+      "type": "object",
+      "required": false,
+      "fields": [
+        { "name": "machineState", "type": "string" },
+        { "name": "timeRemaining", "type": "integer" },
+        { "name": "doorOpen", "type": "boolean" }
+      ]
+    },
+    {
+      "name": "washerState",
+      "type": "object",
+      "required": false,
+      "fields": [
+        { "name": "cycleType", "type": "string" },
+        { "name": "spinSpeed", "type": "string" },
+        { "name": "waterTemperature", "type": "string" },
+        { "name": "soilLevel", "type": "string" },
+        { "name": "washAndGoTankFill", "type": "string" }
+      ]
+    },
+    {
+      "name": "dryerState",
+      "type": "object",
+      "required": false,
+      "fields": [
+        { "name": "cycleType", "type": "string" },
+        { "name": "dryingTemperature", "type": "string" },
+        { "name": "dryLevel", "type": "string" },
+        { "name": "wrinkleShield", "type": "boolean" }
+      ]
+    },
+    {
+      "name": "ovenState",
+      "type": "object",
+      "required": false,
+      "fields": [
+        { "name": "mode", "type": "string" },
+        { "name": "targetTemperature", "type": "number" },
+        { "name": "currentTemperature", "type": "number" },
+        { "name": "timerMinutes", "type": "integer" }
+      ]
+    },
+    {
+      "name": "refrigeratorState",
+      "type": "object",
+      "required": false,
+      "fields": [
+        { "name": "fridgeTemperature", "type": "number" },
+        { "name": "freezerTemperature", "type": "number" },
+        { "name": "iceMode", "type": "string" },
+        { "name": "quickCool", "type": "boolean" }
+      ]
+    },
+    {
+      "name": "airConditionerState",
+      "type": "object",
+      "required": false,
+      "fields": [
+        { "name": "mode", "type": "string" },
+        { "name": "targetTemperature", "type": "number" },
+        { "name": "fanSpeed", "type": "string" },
+        { "name": "swingMode", "type": "string" }
+      ]
+    },
+    { "name": "integrations", "type": "array", "items": "string", "required": false }
+  ]
+}

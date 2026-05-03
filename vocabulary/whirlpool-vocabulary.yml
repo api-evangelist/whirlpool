@@ -1,0 +1,172 @@
+vocabulary:
+  name: Whirlpool Vocabulary
+  description: >-
+    Domain vocabulary for Whirlpool Corporation covering connected appliances,
+    smart home integrations, appliance state management, IoT connectivity,
+    and the Whirlpool brand portfolio.
+  version: '1.0'
+  created: '2026-05-03'
+  modified: '2026-05-03'
+  tags:
+    - Appliances
+    - Smart Home
+    - IoT
+    - Connected Devices
+    - Fortune 500
+
+  terms:
+
+    - term: Whirlpool Corporation
+      definition: >-
+        The world's only major U.S.-based manufacturer of kitchen and laundry
+        appliances, headquartered in Benton Harbor, Michigan, with approximately
+        $16 billion in annual net sales and 41,000 employees globally.
+      tags:
+        - Corporate
+
+    - term: Connected Appliance
+      definition: >-
+        A Whirlpool smart appliance with Wi-Fi connectivity that can be
+        monitored and controlled remotely via the Whirlpool mobile app,
+        voice assistants, or API integrations.
+      tags:
+        - IoT
+
+    - term: 6th Sense Technology
+      definition: >-
+        Whirlpool's proprietary sensor technology that allows appliances to
+        automatically adjust cycles based on load size, soil level, and other
+        real-time conditions for optimal performance and efficiency.
+      tags:
+        - Technology
+
+    - term: Machine State
+      definition: >-
+        The current operational status of a connected appliance: Standby,
+        Running, Paused, Delay, Complete, or Error.
+      tags:
+        - Appliance State
+
+    - term: Wrinkle Shield
+      definition: >-
+        A Whirlpool dryer feature that tumbles clothes periodically after the
+        drying cycle completes to prevent wrinkles if clothes are not removed
+        immediately.
+      tags:
+        - Dryer Feature
+
+    - term: Wash and Go Tank
+      definition: >-
+        An automatic detergent dispensing system in select Whirlpool washers
+        that holds multiple loads' worth of detergent and dispenses the correct
+        amount automatically based on cycle settings.
+      tags:
+        - Washer Feature
+
+    - term: Amazon Dash Replenishment
+      definition: >-
+        An Amazon IoT service integrated with Whirlpool washers to automatically
+        reorder laundry supplies (detergent, dryer sheets) when running low,
+        based on usage tracking from the appliance.
+      tags:
+        - Integration
+
+    - term: Matter Protocol
+      definition: >-
+        An open smart home connectivity standard supported by Whirlpool appliances
+        that enables interoperability across smart home ecosystems from Apple,
+        Amazon, Google, and Samsung.
+      tags:
+        - Connectivity Standard
+
+    - term: KitchenAid
+      definition: >-
+        A premium Whirlpool Corporation brand known for stand mixers, kitchen
+        appliances, and professional-grade cooking equipment. Acquired by
+        Whirlpool in 1986.
+      tags:
+        - Brand
+
+    - term: Maytag
+      definition: >-
+        A Whirlpool Corporation brand known for dependable, high-capacity
+        washers, dryers, and kitchen appliances. Acquired by Whirlpool in 2006.
+      tags:
+        - Brand
+
+    - term: JennAir
+      definition: >-
+        A luxury Whirlpool Corporation brand offering premium kitchen appliances
+        including built-in refrigerators, ranges, and dishwashers for
+        high-end home design.
+      tags:
+        - Brand
+
+    - term: Amana
+      definition: >-
+        A value-oriented Whirlpool Corporation brand offering dependable
+        refrigerators, washers, dryers, and room air conditioners at accessible
+        price points.
+      tags:
+        - Brand
+
+    - term: Brastemp
+      definition: >-
+        A leading Whirlpool Corporation brand in Brazil offering kitchen and
+        laundry appliances designed for the South American market.
+      tags:
+        - Brand
+
+    - term: Consul
+      definition: >-
+        A Whirlpool Corporation brand popular in Brazil offering a broad range
+        of home appliances at accessible price points for Brazilian consumers.
+      tags:
+        - Brand
+
+    - term: InSinkErator
+      definition: >-
+        A Whirlpool Corporation brand manufacturing food waste disposers and
+        instant hot water dispensers, acquired as part of Emerson Electric's
+        InSinkErator division.
+      tags:
+        - Brand
+
+    - term: Whirlpool App
+      definition: >-
+        The official mobile application for iOS and Android that allows users
+        to register, monitor, and control Whirlpool, Maytag, KitchenAid, and
+        Consul connected smart appliances remotely.
+      tags:
+        - Software
+
+    - term: Amazon Alexa Integration
+      definition: >-
+        Voice control integration enabling users to start/pause laundry cycles,
+        adjust oven temperature, check cycle status, and manage refrigerator
+        settings through Amazon Alexa-enabled devices.
+      tags:
+        - Integration
+
+    - term: WHR Cloud
+      definition: >-
+        The Whirlpool cloud platform (api.whrcloud.com) used by connected
+        appliances to communicate state, receive commands, and enable remote
+        control via the Whirlpool mobile app and third-party integrations.
+      tags:
+        - Platform
+
+    - term: Cycle Type
+      definition: >-
+        A predefined set of wash or dry parameters optimized for specific fabric
+        types or soil levels (e.g., Normal, Delicate, HeavyDuty, BulkyItems).
+      tags:
+        - Appliance Settings
+
+    - term: Cloud Push
+      definition: >-
+        The IoT communication pattern used by Whirlpool connected appliances
+        where the appliance proactively sends state updates to the cloud, rather
+        than waiting to be polled.
+      tags:
+        - Connectivity
