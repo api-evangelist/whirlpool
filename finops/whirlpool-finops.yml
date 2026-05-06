@@ -1,5 +1,6 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -9,148 +10,51 @@ alignedWith:
 provider: Whirlpool Corporation
 providerId: whirlpool
 publisherName: Whirlpool Corporation
-serviceCategory: API
+serviceCategory: Connected Appliances
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Appliances
   - Smart Home
   - IoT
-  - Connected Devices
-  - Fortune 500
-  - Consumer Electronics
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Whirlpool Corporation API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+  - Contact Sales
+description: FinOps shape for Whirlpool's connected-appliance APIs is partner-driven rather than billed per-call. There is no public price list; integrations live inside ecosystem partner relationships, so meters and FOCUS columns are minimum placeholders.
+sources:
+  - https://www.whirlpoolcorp.com
+notes: No public pricing or billing surface. Populate meters and FOCUS columns from an actual partner integration agreement when one exists.
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Partner-Negotiated
+  billingFrequency: Per-Invoice
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
-    - Tax
-    - Credit
-    - Adjustment
-  chargeFrequency: Recurring
+    - Usage
 focusColumns:
-  ServiceName: Whirlpool Corporation
-  ServiceCategory: Developer Tools / API
+  ServiceName: Whirlpool Connected Appliances
+  ServiceCategory: Connected Appliances
   ProviderName: Whirlpool Corporation
   PublisherName: Whirlpool Corporation
   InvoiceIssuerName: Whirlpool Corporation
-  PricingCategory: Usage-Based
-  PricingUnit: request
   BillingCurrency: USD
-  ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: partner_integration
+    unit: varies
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
-    dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: Whirlpool Connected Appliances API
-    baseURL: https://api.whrcloud.com
-    tags:
-      - Smart Appliances
-      - IoT
-      - Connected Devices
-      - Washer
-      - Dryer
-      - Oven
-      - Refrigerator
-    serviceName: Whirlpool Connected Appliances API
-    serviceCategory: API
-  - name: Whirlpool Alexa Voice Control
-    baseURL: ''
-    tags:
-      - Amazon Alexa
-      - Voice Control
-      - Smart Home
-      - Integration
-    serviceName: Whirlpool Alexa Voice Control
-    serviceCategory: API
-  - name: Whirlpool Amazon Dash Replenishment
-    baseURL: ''
-    tags:
-      - Amazon Dash
-      - Auto-Replenishment
-      - Smart Home
-      - IoT
-      - Laundry
-    serviceName: Whirlpool Amazon Dash Replenishment
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+      - partner_program
+      - device_class
+principles:
+  - name: Visibility
+    description: Telemetry comes from each ecosystem partner's own usage / device-event reporting (Alexa skill metrics, Dash Replenishment reports, etc.) - not a Whirlpool billing API.
+  - name: Allocation
+    description: Allocate by partner program (Alexa, Google, Dash) and device class (washer, dryer, oven, refrigerator).
+  - name: Optimization
+    description: Optimization is event-shape - reduce unnecessary device polling and consolidate webhooks per partner spec.
+  - name: Accountability
+    description: Owned by the integrating ecosystem team (smart-home / consumer-IoT product owner); finance has no separate API line item.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

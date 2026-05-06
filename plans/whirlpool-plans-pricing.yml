@@ -4,153 +4,38 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Whirlpool Corporation
 providerId: whirlpool
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Appliances
   - Smart Home
   - IoT
   - Connected Devices
-  - Fortune 500
-  - Consumer Electronics
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+  - Contact Sales
+description: Whirlpool Corporation does not operate a public developer portal or self-serve API pricing page for its connected-appliance, voice, or replenishment integrations. Access to the WHRCloud / Whirlpool platform is granted through partner programs (Alexa skill, Amazon Dash Replenishment, Google Home, etc.) rather than a published per-call price list.
+sources:
+  - https://www.whirlpoolcorp.com
+notes: No public developer portal or API pricing surface was found at whirlpoolcorp.com. Smart-appliance integrations are delivered through ecosystem partner programs (Alexa, Google, Dash Replenishment) and do not have published per-call pricing for third-party integrators.
 plans:
-  - id: whirlpool-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Whirlpool Corporation API surface. Intended for evaluation, prototyping,
-      and low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.whrcloud.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://api.whrcloud.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Whirlpool Connected Appliances API
-      - name: Whirlpool Alexa Voice Control
-      - name: Whirlpool Amazon Dash Replenishment
-  - id: whirlpool-pro
-    name: Professional
-    type: paid
-    description: Production tier for Whirlpool Corporation. Provides higher quotas, priority support,
-      and access to the broader API portfolio. Pricing placeholder; align with the provider's pricing
-      page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.whrcloud.com
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://api.whrcloud.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.whrcloud.com
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Whirlpool Connected Appliances API
-      - name: Whirlpool Alexa Voice Control
-      - name: Whirlpool Amazon Dash Replenishment
-  - id: whirlpool-enterprise
-    name: Enterprise
+  - id: whirlpool-contact-sales
+    name: Contact Sales
     type: enterprise
-    description: Custom-negotiated tier for Whirlpool Corporation. Includes dedicated capacity, contractual
-      SLAs, security review, data residency options, and named technical account management.
+    description: Integration access to the Whirlpool connected-appliance platform is arranged through ecosystem-partner agreements. There is no public per-call price; commercial terms (if any) are negotiated alongside the partner integration.
     entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
+      - label: Partner Integration
+        name: partner_integration
+        type: flat
+        metric: varies
         limit: -1
-        timeFrame: month
-        geo: configurable
-        domains:
-          - https://api.whrcloud.com
+        timeFrame: usage
+        geo: global
         unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains:
-          - https://api.whrcloud.com
-        unit: 1
-        price: custom
+        price: contact sales
         userMultiplied: false
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Whirlpool Connected Appliances API
-      - name: Whirlpool Alexa Voice Control
-      - name: Whirlpool Amazon Dash Replenishment
+      - name: Whirlpool Connected Appliances Platform
+      - name: Alexa / Google Home / Dash Replenishment Partnership
+      - name: Contract-Specific Limits
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
