@@ -97,6 +97,8 @@ apis:
           https://www.geekwire.com/2016/whirlpool-is-first-appliance-company-to-integrate-amazon-dash-replenishment-service/
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/whirlpool-corporation
   - type: Website
     url: https://www.whirlpool.com
   - type: Corporate Website
