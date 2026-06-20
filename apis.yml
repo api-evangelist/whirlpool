@@ -9,7 +9,7 @@ description: >-
   for smart home automation, and provides a cloud-connected appliance API used by the
   Whirlpool mobile app and third-party integrations.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Appliances
   - Smart Home
