@@ -101,11 +101,11 @@ common:
     url: https://www.linkedin.com/company/whirlpool-corporation
   - type: Website
     url: https://www.whirlpool.com
-  - type: Corporate Website
+  - type: Website
     url: https://www.whirlpoolcorp.com
   - type: Smart Appliances
     url: https://www.whirlpool.com/smart-appliances.html
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://developer-latam.whirlpool.com
   - type: Wikipedia
     url: https://en.wikipedia.org/wiki/Whirlpool_Corporation
