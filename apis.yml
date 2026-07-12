@@ -97,6 +97,8 @@ apis:
           https://www.geekwire.com/2016/whirlpool-is-first-appliance-company-to-integrate-amazon-dash-replenishment-service/
 
 common:
+  - type: DomainSecurity
+    url: security/whirlpool-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/whirlpool-corporation
   - type: Website
@@ -118,6 +120,8 @@ common:
   - type: JSONSchema
     url: >-
       https://raw.githubusercontent.com/api-evangelist/whirlpool/refs/heads/main/json-schema/whirlpool-appliance-schema.json
+  - url: https://www.whirlpoolcorp.com/latest-news.html
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
