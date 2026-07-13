@@ -1,0 +1,14 @@
+{
+  "repo": "whirlpool",
+  "feeds": [
+    {
+      "source": "https://www.whirlpoolcorp.com/latest-news.html",
+      "feed_url": "https://www.whirlpoolcorp.com/latest-news.html",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 10
+}
