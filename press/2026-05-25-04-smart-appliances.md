@@ -1,7 +1,9 @@
 ---
 title: Smart Appliances
 url: https://www.whirlpool.com/smart-appliances.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Whirlpool" press release artificial intelligence'
 position: 4
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: Whirlpool Corporation recently held its first ATLAS Data & ...
 url: https://www.instagram.com/p/CyBOb8SO0ic/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Whirlpool" press release artificial intelligence'
 position: 2
 source: serpapi-google
