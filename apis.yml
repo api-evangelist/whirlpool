@@ -1,5 +1,5 @@
 aid: whirlpool
-name: Whirlpool Corporation
+name: Whirlpool
 description: >-
   Whirlpool Corporation is the world's only major U.S.-based manufacturer of kitchen
   and laundry appliances, with approximately $16 billion in annual net sales and 41,000
@@ -148,3 +148,4 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-legal-name: Whirlpool Corporation
